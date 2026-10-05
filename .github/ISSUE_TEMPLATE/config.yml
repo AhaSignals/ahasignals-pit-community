@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Installation and first run
+    url: https://ahasignals.com/examples/ahasignals-pit/getting-started/README.md
+    about: Install the published candidate and create an input from an included example.

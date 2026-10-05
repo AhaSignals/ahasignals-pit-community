@@ -1,0 +1,52 @@
+name: Reproduce a finding
+description: Report an unexpected result using a minimal permitted example.
+title: '[Finding] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use synthetic or redistributable data. Remove credentials, personal paths,
+        private URLs and identifying dataset/row values. Reports are public.
+        For an initial confidential inquiry, contact research@ahasignals.com
+        with a description only. Do not upload a private dataset.
+  - type: input
+    id: versions
+    attributes:
+      label: Package, Python and operating system versions
+      placeholder: ahasignals-pit 0.2.0rc1; Python 3.12; Linux
+    validations:
+      required: true
+  - type: textarea
+    id: intent
+    attributes:
+      label: Intended feature and cutoff semantics
+      description: Include the ruleset and mode; explain when this feature should have been available.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal permitted input and command
+      description: Prefer a modification of a bundled synthetic example. Use relative filenames.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Actual finding and expected result
+      description: Include gate, rule ID and reason. Explain why you expected a different result.
+    validations:
+      required: true
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Public disclosure
+      options:
+        - label: I reviewed the input and report and may share them publicly; they contain no credentials or private data.
+          required: true
+  - type: checkboxes
+    id: reuse
+    attributes:
+      label: Optional regression-test permission
+      options:
+        - label: I own the supplied example and permit its redistribution as a regression test under the MIT license.

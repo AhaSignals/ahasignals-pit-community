@@ -1,0 +1,37 @@
+name: Describe an integration
+description: Share a field structure or a repeat-use obstacle without uploading private data.
+title: '[Integration] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A column list and intended workflow are enough to start. Do not attach
+        private datasets. Compatibility does not imply endorsement or certification.
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Where should checks run?
+      description: Describe input preparation, feature construction, or a CI step and how often data changes.
+    validations:
+      required: true
+  - type: textarea
+    id: fields
+    attributes:
+      label: Available fields and missing evidence
+      description: Include clocks, periods, identifiers and source evidence you actually retain. A column list is enough.
+    validations:
+      required: true
+  - type: textarea
+    id: obstacle
+    attributes:
+      label: What prevents first or repeat use?
+      description: State the result or interface you need and how you would use it.
+    validations:
+      required: true
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Public disclosure
+      options:
+        - label: I may share this description publicly and have removed credentials and private information.
+          required: true
